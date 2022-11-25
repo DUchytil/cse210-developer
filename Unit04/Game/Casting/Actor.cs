@@ -157,13 +157,19 @@ namespace Unit04.Game.Casting
             this._velocity = velocity;
         }
 
-        //ADD COMMENT HERE
+        /// <summary>
+        /// Sets the actor's score.
+        /// </summary>
+        /// <param name="score">The increment or decrement to add the the existing score.</param>
         public void SetScore(int score)
         {
             _score += score;
         }
 
-        //ADD COMMENT HERE
+        /// <summary>
+        /// Gets the actor's current score.
+        /// </summary>
+        /// <returns>The actor's score.</returns>
         public int GetScore()
         {
             return _score;

@@ -71,14 +71,13 @@ namespace Unit04.Game.Directing
             robot.MoveNext(maxX, maxY);
 
 
-            //SET THIS FOR ROCK CONDITION
             foreach (Actor actor in rocks)
             {
                 //Making artifacts move
                 Artifact artifact = (Artifact) actor;
                 artifact.MoveNext(maxX, maxY);
 
-                //SET CONDITION HERE
+                //Collision condition for robot and rocks
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     robot.SetScore(-1);
@@ -86,14 +85,13 @@ namespace Unit04.Game.Directing
                 }
             } 
 
-            //SET THIS FOR GEM CONDITION
             foreach (Actor actor in gems)
             {
                 //Making artifacts move
                 Artifact artifact = (Artifact) actor;
                 artifact.MoveNext(maxX, maxY);
 
-                //SET CONDITION HERE
+                //Collision condition for robot and gems
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     robot.SetScore(1);
